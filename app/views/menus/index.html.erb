@@ -1,26 +1,5 @@
-<div class="container-lg">
-<p style="color: green"><%= notice %></p>
-
-<h1>Menus</h1>
-
-<div id="menus">
-  <% @menus.each do |menu| %>
-    <%= render menu %>
-    <p>
-      <%= link_to "Show this menu", menu %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New menu", new_menu_path %>
-</div>
-<%# <div class="container-sm">100% wide until small breakpoint</div>
-<div class="container-md">100% wide until medium breakpoint</div>
-<div class="container-lg">100% wide until large breakpoint</div>
-<div class="container-xl">100% wide until extra large breakpoint</div>
-<div class="container-xxl">100% wide until extra extra large breakpoint</div> %>
-<div class="container-lg">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<%# <div class="container-sm"><h1>Menus</h1></div> %>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,13 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <%= link_to "Criar Menu",new_menu_path,class: "nav-link active" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <%= link_to "Novo Artigo",new_article_path,class: "nav-link active" %>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -44,4 +20,4 @@
     </div>
   </div>
 </nav>
-</div>
+
